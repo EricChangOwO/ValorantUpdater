@@ -1,0 +1,29 @@
+installer (windows package exe)
+main program ----> py -----> bat ------> config file in %appdata% folder   
+
+powershell -Command "Invoke-WebRequest http://www.example.com/package.zip -OutFile package.zip"
+
+現在只需要達成替換bat的功能
+
+路徑存成 config 
+    影片路徑
+    遊戲路徑
+
+所以開啟的時候 check 主程式 update
+
+Opener (Updater)
+先 Check Update 完再開主程式
+主程式讀取路徑檔
+
+installer 裡面附 
+
+(Opener)Updater (py 用 Valorant Icon)
+Language file
+Video File
+config 放 programs files
+Main Program(bat)
+py 要與 bat 相同路徑
+
+先叫他們回傳檔案
+
+!!! Valorant 要先設定成日文
