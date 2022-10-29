@@ -6,12 +6,12 @@ if exist "going.bat" (exit)
 
 :copyback
 rename notgoing.bat going.bat
-echo Copying origin files...
+echo 正在複製原檔案...
 copy %videodir% "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu" /y >nul
 
 :main
 cls
-echo Starting Riot Client
+echo 啟動 Riot 啟動器
 start "" "%valodir%\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live"
 goto clienton
 
@@ -20,24 +20,24 @@ tasklist /nh /fi "imagename eq RiotClientUx.exe" | findstr /i "RiotClientUx.exe"
 
 :clsgo
 cls
-echo Check if valorant is opened.
+echo 檢查遊戲是否啟動中.
 timeout 1 >nul
 cls
-echo Check if valorant is opened..
+echo 檢查遊戲是否啟動中..
 timeout 1 >nul
 cls
-echo Check if valorant is opened...
+echo 檢查遊戲是否啟動中...
 timeout 1 >nul
 goto check
 
 :check
-tasklist /nh /fi "imagename eq VALORANT.exe" | findstr /i "VALORANT.exe" >nul && (goto copy) || (goto clsgo && goto check)
+tasklist /nh /fi "imagename eq VALORANT.exe" | findstr /i "VALORANT.exe" >nul && (goto copy) || (goto clsgo 啟動 && goto check)
 
 :copy
 copy %videodir% "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu" /y
 copy "langen\*.*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks"/y
 cls
 color 0a
-echo Already done! this window will close after 5 sec
+echo 已複製完成，本視窗將在五秒後關閉
 rename going.bat notgoing.bat
 timeout 5 >nul
