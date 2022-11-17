@@ -1,9 +1,6 @@
 @echo off
 call config.bat
 
-:checksameprob
-if exist "going.bat" (exit)
-
 :copyback
 rename notgoing.bat going.bat
 echo Copying origin files...
