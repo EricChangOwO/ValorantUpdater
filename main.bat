@@ -1,10 +1,10 @@
 @echo off
 call config.bat
 
-:copyback
-rename notgoing.bat going.bat
-echo Copying origin files...
-copy %videodir% "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu" /y >nul
+:update
+if exist %videodir%\VTC_Valorant_Game_Changers_Homepage.mp4 (goto main) else (
+    ren "%videodir%" "VTC_Valorant_Game_Changers_Homepage.mp4"
+) 
 
 :main
 cls
@@ -36,5 +36,4 @@ copy "langen\*.*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks"/y
 cls
 color 0a
 echo Already done! this window will close after 5 sec
-rename going.bat notgoing.bat
 timeout 5 >nul
