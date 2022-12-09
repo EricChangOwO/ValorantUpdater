@@ -2,8 +2,8 @@
 call config.bat
 
 :update
-if exist %videodir%\VTC_Valorant_Game_Changers_Homepage.mp4 (goto main) else (
-    ren "%videodir%" "VTC_Valorant_Game_Changers_Homepage.mp4"
+if exist %videodir%\Homepage_Ep5_AIII.mp4 (goto main) else (
+    ren "%videodir%" "Homepage_Ep5_AIII.mp4"
 ) 
 
 :main
