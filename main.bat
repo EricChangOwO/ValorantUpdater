@@ -1,9 +1,10 @@
 @echo off
 call config.bat
+set FileName=Homepage_Ep5_AIII.mp4
 
 :update
-if exist %videodir%\Homepage_Ep5_AIII.mp4 (goto main) else (
-    ren "%videodir%" "Homepage_Ep5_AIII.mp4"
+if exist %videodir%\%FileName% (goto main) else (
+    ren "%videodir%" "%FileName%"
 ) 
 
 :main
