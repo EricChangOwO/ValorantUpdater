@@ -1,6 +1,6 @@
 @echo off
 call config.bat
-set FileName=VCT_LockIn_HomeScren-Vignette_HD_1_1.mp4
+set FileName=HomepageEp6A2.mp4
 
 :update
 if exist %videodir%\%FileName% (goto original) else (
