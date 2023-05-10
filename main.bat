@@ -1,6 +1,6 @@
 @echo off
 call config.bat
-set FileName=HomepageEp6A2.mp4
+set FileName=HomepageEp6A3_Arcade.mp4
 
 :update
 if exist %videodir%\%FileName% (goto original) else (
