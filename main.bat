@@ -19,7 +19,7 @@ goto checkbutnocopy
 tasklist /nh /fi "imagename eq VALORANT.exe" | findstr /i "VALORANT.exe" >nul && (goto copyback) || (timeout 1
 goto checkbutnocopy)
 
-:copyback
+:tmpcopyback
 copy "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu\*" Original\Videos /y
 copy "%valodir%\VALORANT\live\ShooterGame\Content\Paks\ja_JP_Text-WindowsClient.*" Original\langdefault /y
 exit
