@@ -1,11 +1,9 @@
 @echo off
 call config.bat
-set FileName=HomepageEp6A3_Arcade.mp4
+set FileName=HomepageEp6A2.mp4
 
-:update
-if exist %videodir%\%FileName% (goto original) else (
-    ren "%videodir%" "%FileName%"
-) 
+::update the filename
+ren "%videodir%" "%FileName%"
 
 :original
 if exist Original if exist Original\Videos\*.mp4 (goto main)
@@ -19,14 +17,14 @@ goto checkbutnocopy
 tasklist /nh /fi "imagename eq VALORANT.exe" | findstr /i "VALORANT.exe" >nul && (goto copyback) || (timeout 1
 goto checkbutnocopy)
 
-:tmpcopyback
+:copyback
 copy "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu\*" Original\Videos /y
 copy "%valodir%\VALORANT\live\ShooterGame\Content\Paks\ja_JP_Text-WindowsClient.*" Original\langdefault /y
 exit
 
 :main
 copy "Original\Videos\*" "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu" /y
-copy "Original\langdefault\*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks" /y
+REM // Already Patched // copy "Original\langdefault\*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks" /y
 cls
 echo Starting Riot Client
 start "" "%valodir%\Riot Client\RiotClientServices.exe" --launch-product=valorant --launch-patchline=live"
@@ -38,5 +36,5 @@ goto check)
 
 :copy
 copy %videodir% "%valodir%\VALORANT\live\ShooterGame\Content\Movies\Menu" /y
-copy "langen\*.*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks"/y
+REM // Already Patched // copy "langen\*.*" "%valodir%\VALORANT\live\ShooterGame\Content\Paks"/y
 exit
