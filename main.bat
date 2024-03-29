@@ -1,6 +1,6 @@
 @echo off
 call config.bat
-set FileName=HomepageEp6A2.mp4
+set FileName=EP8A2_805_Homescreen.mp4
 
 ::update the filename
 ren "%videodir%" "%FileName%"
