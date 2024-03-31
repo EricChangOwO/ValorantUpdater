@@ -1,4 +1,10 @@
-## ValorantUpdater
+# ValorantUpdater
+用於修改程式背景，之前可以連同角色語音一起修改，但是被 Riot Patch 了
+所以現在只能改背景
+#### Screenshot
+![image alt](https://i.imgur.com/WbR86Kt.png)
+
+# 設定檔案調整
 ```config.bat``` 是整個程式唯一需要修改的檔案
 > 需要修改的有 程式路徑 / 影片路徑
 
