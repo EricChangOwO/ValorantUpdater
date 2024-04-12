@@ -2,7 +2,7 @@
 用於修改程式背景，之前可以連同角色語音一起修改，但是被 Riot Patch 了
 所以現在只能改背景
 
-#### Screenshot
+### Screenshot
 漂亮的截圖 是從 Wallpaper Engine 弄 .mp4 下來的
 
 ![image alt](https://i.imgur.com/WbR86Kt.png)
